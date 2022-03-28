@@ -1,0 +1,815 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+h1 {
+    font-family: "Allerta Stencil", "Special Elite", sans-serif;
+    text-align: center;
+    font-size: 2.2rem;
+    color: rgb(80, 80, 80);
+    margin: 15px;
+    padding: 10px;
+}
+
+/*LOGO*/
+
+.logo {
+    width: 432px;
+    height: 246px;
+    display: block;
+    margin: auto;
+}
+
+/*INDEX CON ESTRUCTURA GRID*/
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 293px 1070px 50px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    justify-content: center;
+}
+
+.header {
+    grid-area: header;
+}
+.main {
+    grid-area:main;
+}
+.footer {
+    grid-area: footer;
+}
+
+/*NAVEGADOR*/
+
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+    font-size: 1.4rem;
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+    background-color: red;
+    width: 160px;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    background-color: red;
+    color: rgb(0, 0, 0);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.submenu li {
+    list-style: none;
+    display: block;
+    background-color: red;   
+    width: 160px; 
+}
+
+.submenu__bio {
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.submenu__bio li {
+    list-style: none;
+    display: block;
+    background-color: red;   
+    width: 160px; 
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/*SECTION INDEX*/
+
+section {
+    display: grid;
+    grid-template-columns: 560px;
+    justify-content: center;
+}
+
+iframe {
+    padding: 10px 0px;
+} 
+
+/*FOOTER*/
+
+.pie {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.pie li {
+    position: relative;
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.pie li a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: rgb(73, 73, 73);
+}
+
+.pie li a:hover {
+    color: rgb(250, 250, 250);
+}
+
+/*BIO*/
+
+.contenedorBio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 293px 400px 50px;
+    grid-template-areas: 
+    "headerBio"
+    "mainBio"
+    "footerBio";
+    justify-content: center;
+}
+
+.headerBio {
+    grid-area: headerBio;
+}
+.mainBio {
+    grid-area:mainBio;
+}
+.footerBio {
+    grid-area: footerBio;
+}
+
+p {
+    padding: 20px;
+    text-align: justify;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bio {
+    background-image: url("media/fondo.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/*DISCOGRAFÍA*/
+
+.contenedorDisco {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 293px 1424px 50px;
+    grid-template-areas: 
+    "headerDisco"
+    "mainDisco"
+    "footerDisco";
+    justify-content: center;
+}
+
+.headerDisco {
+    grid-area: headerDisco;
+}
+.mainDisco {
+    grid-area:mainDisco;
+}
+.footerDisco {
+    grid-area: footerDisco;
+}
+
+.discografia li {
+    font-size: 1.4rem;
+    padding: 10px 0px;
+    text-align: center;
+    list-style: none;
+}
+
+.discografia li a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    background-color: red;
+    color: rgb(0, 0, 0);
+}
+
+.discografia li a:hover {
+    color: rgb(250, 250, 250);
+}
+
+.discografia li img {
+    width: 400px;
+    height: 400px;
+}
+
+/*CONTACTO*/
+
+.contenedorContacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 293px 400px 50px;
+    grid-template-areas: 
+    "headerContacto"
+    "mainContacto"
+    "footerContacto";
+    justify-content: center;
+}
+
+.headerContacto {
+    grid-area: headerContacto;
+}
+
+.mainContacto {
+    grid-area: mainContacto;
+}
+
+.footerContacto {
+    grid-area: footerContacto;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 400px;
+    text-align: center;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.texto {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: white;
+}
+
+/*MERCH*/
+
+.contenedorMerch {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 293px 1355px 50px;
+    grid-template-areas: 
+    "headerMerch"
+    "mainMerch"
+    "footerMerch";
+    justify-content: center;
+}
+
+.headerMerch {
+    grid-area: headerMerch;
+}
+.mainMerch {
+    grid-area:mainMerch;
+}
+.footerMerch {
+    grid-area: footerMerch;
+}
+
+h2 {
+    font-family: "Allerta Stencil", "Special Elite", sans-serif;
+    color: rgb(80, 80, 80);
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 a {
+    text-decoration: none;
+    color: rgb(80, 80, 80);
+}
+
+.modelo {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+}
+
+.modelo img {
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+/*GALERÍA*/
+
+.contenedorGaleria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 293px 1400px 50px;
+    grid-template-areas: 
+    "headerGaleria"
+    "mainGaleria"
+    "footerGaleria";
+    justify-content: center;
+}
+
+.headerGaleria {
+    grid-area: headerGaleria;
+}
+.mainGaleria {
+    grid-area:mainGaleria;
+}
+.footerGaleria {
+    grid-area: footerGaleria;
+}
+
+.galeria img {
+    width: 480px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 480px 480px;
+    grid-template-rows: repeat(4, 320px);
+    justify-content: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+/*LETRAS*/
+
+.contenedorLetras {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 293px 1280px 50px;
+    grid-template-areas: 
+    "headerLetras"
+    "mainLetras"
+    "footerLetras";
+    justify-content: center;
+}
+
+.headerLetras {
+    grid-area: headerLetras;
+}
+.mainLetras {
+    grid-area:mainLetras;
+}
+.footerLetras {
+    grid-area: footerLetras;
+}
+
+.letras img {
+    width: 450px;
+}
+
+.letras {
+    display: grid;
+    grid-template-columns: 450px 450px;
+    grid-template-areas: 
+    "peste quema"
+    "cuestiona cancer"
+    "prime piggery";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.prime {
+    grid-area: prime;
+    display: flex;
+    align-self: stretch;
+}
+.cuestiona {
+    grid-area: cuestiona;
+    display: flex;
+    align-self: stretch;
+}
+.cancer {
+    grid-area: cancer;
+    display: flex;
+    align-self: stretch;
+}
+.quema {
+    grid-area: quema;
+    display: flex;
+    align-self: stretch;
+}
+.peste {
+    grid-area: peste;
+    display: flex;
+    align-self: stretch;
+}
+.piggery {
+    grid-area: piggery;
+    display: flex;
+    align-self: stretch;
+}
+
+/*RESPONSIVE TABLET 768px*/
+
+@media screen and (max-width: 768px){
+    .menu {
+        width: 768px;
+    }
+
+    .menu li {
+        padding: 10px 0;
+        width: 150px;
+    }
+    
+    .menu li:hover ul {
+        display: none;
+    }
+
+    .contenedorGaleria {
+        grid-template-columns: 768px;
+        grid-template-rows: 293px 2700px 50px;
+    }
+
+    .galeria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedorLetras {
+        grid-template-columns: 768px;
+        grid-template-rows: 293px 3140px 50px;
+    }
+    
+    .letras img {
+        width: 600px;
+        padding: 10px 0;
+    }
+
+    .letras {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .letras div {
+        align-self:center;
+    }
+}
+
+/*RESPONSIVE MOBILE 480px*/
+
+@media screen and (max-width: 480px){
+    .contenedor {
+        grid-template-columns: 480px;
+        grid-template-rows: 481px 1070px 50px;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section iframe {
+        width: 460px;
+        align-self:center;
+    }
+
+    .menu {
+       width: 480px; 
+       display: flex;
+       flex-direction: column;
+    }
+
+    .menu li {
+        width: 480px;
+        padding: 10px 0;
+    }
+
+    .modelo img{
+        width: 460px;
+        height: 230px;
+    } 
+
+    .menu li:hover ul {
+        display: none;
+    }
+
+    .contenedorDisco {
+        grid-template-columns: 480px;
+        grid-template-rows: 481px 1424px 50px;
+    }
+
+    .contenedorMerch {
+        grid-template-columns: 480px;
+        grid-template-rows: 481px 1355px 50px;
+    }
+
+    .contenedorContacto {
+        grid-template-columns: 480px;
+        grid-template-rows: 481px 400px 50px;
+    }
+
+    .contenedorBio {
+        grid-template-columns: 480px;
+        grid-template-rows: 481px 500px 50px;
+    }
+
+    .contenedorGaleria {
+        grid-template-columns: 480px;
+        grid-template-rows: 481px 2600px 50px;
+    }
+
+    .galeria img {
+        width: 460px;
+    }
+
+    .contenedorLetras {
+        grid-template-columns: 480px;
+        grid-template-rows: 481px 2460px 50px;
+    }
+
+    .letras img {
+        width: 460px;
+    }
+
+    .letras {
+        width: 480px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 425px){
+    .contenedor {
+        grid-template-columns: 425px;
+        grid-template-rows: 477px 1115px 50px;
+    }
+
+    .logo {
+        width: 425px;
+        height: 242px;
+    }
+
+    section iframe {
+        width: 425px;
+    }
+
+    .menu {
+       width: 425px; 
+    }
+
+    .menu li {
+        width: 425px;
+    }
+
+    .pie {
+        width: 425px;
+    }
+
+    .pie li {
+        padding: 10px;
+    }
+
+    .modelo img{
+        width: 410px;
+        height: 205px;
+    } 
+
+    .contenedorDisco {
+        grid-template-columns: 425px;
+        grid-template-rows: 477px 1460px 50px;
+    }
+
+    .contenedorMerch {
+        grid-template-columns: 425px;
+        grid-template-rows: 477px 1240px 50px;
+    }
+
+    .contenedorContacto {
+        grid-template-columns: 425px;
+        grid-template-rows: 477px 400px 50px;
+    }
+
+    .contenedorBio {
+        grid-template-columns: 425px;
+        grid-template-rows: 477px 520px 50px;
+    }
+
+    .contenedorGaleria {
+        grid-template-columns: 425px;
+        grid-template-rows: 477px 2405px 50px;
+    }
+
+    .galeria img {
+        width: 425px;
+    }
+
+    .contenedorLetras {
+        grid-template-columns: 425px;
+        grid-template-rows: 477px 2290px 50px;
+    }
+
+    .letras img {
+        width: 425px;
+    }
+
+    .letras {
+        width: 425px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .contenedor {
+        grid-template-columns: 375px;
+        grid-template-rows: 449px 1115px 50px;
+    }
+
+    .logo {
+        width: 375px;
+        height: 214px;
+    }
+
+    section iframe {
+        width: 375px;
+    }
+
+    .menu {
+       width: 375px; 
+    }
+
+    .menu li {
+        width: 375px;
+    }
+
+    .pie {
+        width: 375px;
+    }
+
+    .pie li {
+        padding: 10px;
+    }
+
+    .modelo img{
+        width: 370px;
+        height: 185px;
+    } 
+
+    .contenedorDisco {
+        grid-template-columns: 375px;
+        grid-template-rows: 449px 1335px 50px;
+    }
+
+    .discografia li img {
+        width: 360px;
+        height: 360px;
+    }
+
+    .contenedorMerch {
+        grid-template-columns: 375px;
+        grid-template-rows: 449px 1180px 50px;
+    }
+
+    .contenedorContacto {
+        grid-template-columns: 375px;
+        grid-template-rows: 449px 400px 50px;
+    }
+
+    .contenedorBio {
+        grid-template-columns: 375px;
+        grid-template-rows: 449px 550px 50px;
+    }
+
+    .contenedorGaleria {
+        grid-template-columns: 375px;
+        grid-template-rows: 449px 2135px 50px;
+    }
+
+    .galeria img {
+        width: 375px;
+    }
+
+    .contenedorLetras {
+        grid-template-columns: 375px;
+        grid-template-rows: 449px 2050px 50px;
+    }
+
+    .letras img {
+        width: 375px;
+    }
+
+    .letras {
+        width: 375px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .contenedor {
+        grid-template-columns: 320px;
+        grid-template-rows: 417px 1115px 50px;
+    }
+
+    .logo {
+        width: 320px;
+        height: 182px;
+    }
+
+    section iframe {
+        width: 320px;
+    }
+
+    .menu {
+       width: 320px; 
+    }
+
+    .menu li {
+        width: 320px;
+    }
+
+    .pie {
+        width: 320px;
+    }
+
+    .pie li {
+        padding: 10px 2px;
+    }
+
+    .modelo img{
+        width: 310px;
+        height: 155px;
+    } 
+
+    .contenedorDisco {
+        grid-template-columns: 320px;
+        grid-template-rows: 417px 1210px 50px;
+    }
+
+    .discografia li img {
+        width: 310px;
+        height: 310px;
+    }
+
+    .contenedorMerch {
+        grid-template-columns: 320px;
+        grid-template-rows: 417px 1080px 50px;
+    }
+
+    .contenedorContacto {
+        grid-template-columns: 320px;
+        grid-template-rows: 417px 400px 50px;
+    }
+
+    .contenedorBio {
+        grid-template-columns: 320px;
+        grid-template-rows: 417px 610px 50px;
+    }
+
+    .contenedorGaleria {
+        grid-template-columns: 320px;
+        grid-template-rows: 417px 1845px 50px;
+    }
+
+    .galeria img {
+        width: 320px;
+    }
+
+    .contenedorLetras {
+        grid-template-columns: 320px;
+        grid-template-rows: 417px 1780px 50px;
+    }
+
+    .letras img {
+        width: 320px;
+    }
+
+    .letras {
+        width: 320px;
+    }
+}
+
+
+    
