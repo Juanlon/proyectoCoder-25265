@@ -8,6 +8,18 @@ html {
     font-size: 62,5%;
 }
 
+@keyframes animacion {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
 h1 {
     font-family: "Allerta Stencil", "Special Elite", sans-serif;
     text-align: center;
@@ -15,6 +27,11 @@ h1 {
     color: rgb(80, 80, 80);
     margin: 15px;
     padding: 10px;
+    animation-name: animacion;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count:initial;
 }
 
 /*LOGO*/
@@ -227,6 +244,12 @@ p {
 .discografia li img {
     width: 400px;
     height: 400px;
+    transition: .5s;
+}
+
+.discografia li img:hover {
+    width: 500px;
+    height: 500px;
 }
 
 /*CONTACTO*/
@@ -266,6 +289,15 @@ form {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     color: white;
+}
+
+div textarea {
+    height: 50px;
+    transition: all;
+}
+
+div textarea:focus {
+    height: 150px;
 }
 
 /*MERCH*/
@@ -317,11 +349,25 @@ h2 a {
     padding: 10px;
 }
 
+@keyframes colorear {
+    0%{
+        color: white;
+    }
+    100%{
+        color: red;
+    }
+}
+
 h3 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem;
     color: white;
     text-align: center;
+    animation-name: colorear;
+    animation-duration: 8s;
+    animation-timing-function:ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
 }
 
 /*GALERÍA*/
