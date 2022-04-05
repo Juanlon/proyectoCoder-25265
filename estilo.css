@@ -20,18 +20,29 @@ html {
     }
 }
 
+.container-fluid {
+    padding: 0;
+}
+
 h1 {
     font-family: "Allerta Stencil", "Special Elite", sans-serif;
     text-align: center;
     font-size: 2.2rem;
     color: rgb(80, 80, 80);
-    margin: 15px;
+    /*margin: 15px 15px;*/
     padding: 10px;
+    display: flex;
+    justify-content: center;
     animation-name: animacion;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-delay: 2s;
     animation-iteration-count:initial;
+}
+
+main .col-12 {
+    padding: 15px 0;
+    margin: 0;
 }
 
 /*LOGO*/
@@ -43,41 +54,37 @@ h1 {
     margin: auto;
 }
 
-/*INDEX CON ESTRUCTURA GRID*/
-
-.contenedor {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 293px 1070px 50px;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-    justify-content: center;
+.row h3 {
+    padding: 0;
 }
 
-.header {
-    grid-area: header;
+.row nav {
+    padding: 0;
 }
-.main {
-    grid-area:main;
-}
-.footer {
-    grid-area: footer;
+
+.row ul {
+    margin: 0;
 }
 
 /*NAVEGADOR*/
+
+nav {
+    margin: 0;
+    padding: 0;
+}
 
 .menu {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .menu li {
     position: relative;
     font-size: 1.4rem;
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     list-style: none;
     background-color: red;
@@ -96,19 +103,21 @@ h1 {
     display: none;
     position: absolute;
     z-index: 2;
+    padding: 0;
 }
 
 .submenu li {
     list-style: none;
     display: block;
     background-color: red;   
-    width: 160px; 
+    width: 165px;
 }
 
 .submenu__bio {
     display: none;
     position: absolute;
     z-index: 2;
+    padding: 0;
 }
 
 .submenu__bio li {
@@ -163,34 +172,19 @@ iframe {
     color: rgb(250, 250, 250);
 }
 
+footer .col-12 {
+    padding: 0;
+}
+
 /*BIO*/
-
-.contenedorBio {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 293px 400px 50px;
-    grid-template-areas: 
-    "headerBio"
-    "mainBio"
-    "footerBio";
-    justify-content: center;
-}
-
-.headerBio {
-    grid-area: headerBio;
-}
-.mainBio {
-    grid-area:mainBio;
-}
-.footerBio {
-    grid-area: footerBio;
-}
 
 p {
     padding: 20px;
     text-align: justify;
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
 }
 
 .bio {
@@ -199,27 +193,15 @@ p {
     background-size: cover;
 }
 
+.row .bio {
+    padding: 20px;
+}
+
 /*DISCOGRAFÍA*/
 
-.contenedorDisco {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 293px 1424px 50px;
-    grid-template-areas: 
-    "headerDisco"
-    "mainDisco"
-    "footerDisco";
-    justify-content: center;
-}
 
-.headerDisco {
-    grid-area: headerDisco;
-}
-.mainDisco {
-    grid-area:mainDisco;
-}
-.footerDisco {
-    grid-area: footerDisco;
+.discografia {
+    padding: 0;
 }
 
 .discografia li {
@@ -254,29 +236,6 @@ p {
 
 /*CONTACTO*/
 
-.contenedorContacto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 293px 400px 50px;
-    grid-template-areas: 
-    "headerContacto"
-    "mainContacto"
-    "footerContacto";
-    justify-content: center;
-}
-
-.headerContacto {
-    grid-area: headerContacto;
-}
-
-.mainContacto {
-    grid-area: mainContacto;
-}
-
-.footerContacto {
-    grid-area: footerContacto;
-}
-
 form {
     display: grid;
     grid-template-columns: 400px;
@@ -301,27 +260,6 @@ div textarea:focus {
 }
 
 /*MERCH*/
-
-.contenedorMerch {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 293px 1355px 50px;
-    grid-template-areas: 
-    "headerMerch"
-    "mainMerch"
-    "footerMerch";
-    justify-content: center;
-}
-
-.headerMerch {
-    grid-area: headerMerch;
-}
-.mainMerch {
-    grid-area:mainMerch;
-}
-.footerMerch {
-    grid-area: footerMerch;
-}
 
 h2 {
     font-family: "Allerta Stencil", "Special Elite", sans-serif;
@@ -363,6 +301,7 @@ h3 {
     font-size: 1.2rem;
     color: white;
     text-align: center;
+    margin: 0;
     animation-name: colorear;
     animation-duration: 8s;
     animation-timing-function:ease-in-out;
@@ -372,62 +311,16 @@ h3 {
 
 /*GALERÍA*/
 
-.contenedorGaleria {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 293px 1400px 50px;
-    grid-template-areas: 
-    "headerGaleria"
-    "mainGaleria"
-    "footerGaleria";
-    justify-content: center;
-}
-
-.headerGaleria {
-    grid-area: headerGaleria;
-}
-.mainGaleria {
-    grid-area:mainGaleria;
-}
-.footerGaleria {
-    grid-area: footerGaleria;
-}
-
 .galeria img {
     width: 480px;
 }
 
-.galeria {
-    display: grid;
-    grid-template-columns: 480px 480px;
-    grid-template-rows: repeat(4, 320px);
-    justify-content: center;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+.row .col-6 {
+    padding: 10px;
 }
+
 
 /*LETRAS*/
-
-.contenedorLetras {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 293px 1280px 50px;
-    grid-template-areas: 
-    "headerLetras"
-    "mainLetras"
-    "footerLetras";
-    justify-content: center;
-}
-
-.headerLetras {
-    grid-area: headerLetras;
-}
-.mainLetras {
-    grid-area:mainLetras;
-}
-.footerLetras {
-    grid-area: footerLetras;
-}
 
 .letras img {
     width: 450px;
@@ -486,29 +379,121 @@ h3 {
 
     .menu li {
         padding: 10px 0;
-        width: 150px;
+        width: 130px;
+        font-size: 1.1rem;
     }
     
     .menu li:hover ul {
         display: none;
     }
 
-    .contenedorGaleria {
-        grid-template-columns: 768px;
-        grid-template-rows: 293px 2700px 50px;
+    .header {
+        width:768px;
+        margin: 0;
     }
 
-    .galeria {
+    .main {
+        width: 768px;
+        margin: 0;
+    }
+
+    .footer {
+        width: 768px;
+        margin: 0;
+    }
+
+    h3 .col-12 {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
     }
 
-    .contenedorLetras {
-        grid-template-columns: 768px;
-        grid-template-rows: 293px 3140px 50px;
+    .headerGaleria {
+        width: 768px;
     }
-    
+
+    .mainGaleria {
+        width: 768px;
+    }
+
+    .footerGaleria {
+        width: 768px;
+    }
+
+    .headerLetras {
+        width: 768px;
+        margin: 0;
+    }
+
+    .mainLetras {
+        width: 768px;
+        margin: 0;
+    }
+
+    .footerLetras {
+        width: 768px;
+        margin: 0;
+    }
+
+    .headerBio {
+        width:768px;
+        margin: 0;
+    }
+
+    .mainBio {
+        width: 768px;
+        margin: 0;
+    }
+
+    .footerBio {
+        width: 768px;
+        margin: 0;
+    }
+
+    .headerDisc {
+        width:768px;
+        margin: 0;
+    }
+
+    .mainDisc {
+        width: 768px;
+        margin: 0;
+    }
+
+    .footerDisc {
+        width: 768px;
+        margin: 0;
+    }
+
+    .headerMerch {
+        width: 768px;
+        margin: 0;
+    }
+
+    .mainMerch {
+        width: 768px;
+        margin: 0;
+    }
+
+    .footerMerch {
+        width: 768px;
+        margin: 0;
+    }
+
+    .headerContacto {
+        width: 768px;
+        margin: 0;
+    }
+
+    .mainContacto {
+        width: 768px;
+        margin: 0;
+    }
+
+    .footerContacto {
+        width: 768px;
+        margin: 0;
+    }
+   
     .letras img {
         width: 600px;
         padding: 10px 0;
@@ -527,9 +512,20 @@ h3 {
 /*RESPONSIVE MOBILE 480px*/
 
 @media screen and (max-width: 480px){
-    .contenedor {
-        grid-template-columns: 480px;
-        grid-template-rows: 481px 1070px 50px;
+
+    .header {
+        width:480px;
+        margin: 0;
+    }
+
+    .main {
+        width: 480px;
+        margin: 0;
+    }
+
+    .footer {
+        width: 480px;
+        margin: 0;
     }
 
     section {
@@ -563,38 +559,79 @@ h3 {
         display: none;
     }
 
-    .contenedorDisco {
-        grid-template-columns: 480px;
-        grid-template-rows: 481px 1424px 50px;
+    .headerBio {
+        width:480px;
     }
 
-    .contenedorMerch {
-        grid-template-columns: 480px;
-        grid-template-rows: 481px 1355px 50px;
+    .mainBio {
+        width: 480px;
     }
 
-    .contenedorContacto {
-        grid-template-columns: 480px;
-        grid-template-rows: 481px 400px 50px;
+    .footerBio {
+        width: 480px;
     }
 
-    .contenedorBio {
-        grid-template-columns: 480px;
-        grid-template-rows: 481px 500px 50px;
+    .headerDisc {
+        width:480px;
     }
 
-    .contenedorGaleria {
-        grid-template-columns: 480px;
-        grid-template-rows: 481px 2600px 50px;
+    .mainDisc {
+        width: 480px;
     }
 
-    .galeria img {
-        width: 460px;
+    .footerDisc {
+        width: 480px;
     }
 
-    .contenedorLetras {
-        grid-template-columns: 480px;
-        grid-template-rows: 481px 2460px 50px;
+    .headerMerch {
+        width:480px;
+    }
+
+    .mainMerch {
+        width: 480px;
+    }
+
+    .footerMerch {
+        width: 480px;
+    }
+
+    .headerContacto {
+        width:480px;
+    }
+
+    .mainContacto {
+        width: 480px;
+    }
+
+    .footerContacto {
+        width: 480px;
+    }
+
+    .headerGaleria {
+        width: 480px;
+        margin: 0;
+    }
+
+    .mainGaleria {
+        width: 480px;
+        margin: 0;
+    }
+
+    .footerGaleria {
+        width: 480px;
+        margin: 0;
+    }
+
+    .headerLetras {
+        width: 480px;
+    }
+
+    .mainLetras {
+        width: 480px;
+    }
+
+    .footerLetras {
+        width: 480px;
     }
 
     .letras img {
@@ -611,9 +648,17 @@ h3 {
 }
 
 @media screen and (max-width: 425px){
-    .contenedor {
-        grid-template-columns: 425px;
-        grid-template-rows: 477px 1115px 50px;
+
+    .header {
+        width: 425px;
+    }
+
+    .main {
+        width: 425px;
+    }
+
+    .footer {
+        width: 425px;
     }
 
     .logo {
@@ -646,38 +691,76 @@ h3 {
         height: 205px;
     } 
 
-    .contenedorDisco {
-        grid-template-columns: 425px;
-        grid-template-rows: 477px 1460px 50px;
+    .headerDisc {
+        width:425px;
     }
 
-    .contenedorMerch {
-        grid-template-columns: 425px;
-        grid-template-rows: 477px 1240px 50px;
-    }
-
-    .contenedorContacto {
-        grid-template-columns: 425px;
-        grid-template-rows: 477px 400px 50px;
-    }
-
-    .contenedorBio {
-        grid-template-columns: 425px;
-        grid-template-rows: 477px 520px 50px;
-    }
-
-    .contenedorGaleria {
-        grid-template-columns: 425px;
-        grid-template-rows: 477px 2405px 50px;
-    }
-
-    .galeria img {
+    .mainDisc {
         width: 425px;
     }
 
-    .contenedorLetras {
-        grid-template-columns: 425px;
-        grid-template-rows: 477px 2290px 50px;
+    .footerDisc {
+        width: 425px;
+    }
+
+    .headerMerch {
+        width:425px;
+    }
+
+    .mainMerch {
+        width: 425px;
+    }
+
+    .footerMerch {
+        width: 425px;
+    }
+
+    .headerContacto {
+        width:425px;
+    }
+
+    .mainContacto {
+        width: 425px;
+    }
+
+    .footerContacto {
+        width: 425px;
+    }
+
+    .headerBio {
+        width:425px;
+    }
+
+    .mainBio {
+        width: 425px;
+    }
+
+    .footerBio {
+        width: 425px;
+    }
+
+    .headerGaleria {
+        width: 425px;
+    }
+
+    .mainGaleria {
+        width: 425px;
+    }
+
+    .footerGaleria {
+        width: 425px;
+    }
+
+    .headerLetras {
+        width: 425px;
+    }
+
+    .mainLetras {
+        width: 425px;
+    }
+
+    .footerLetras {
+        width: 425px;
     }
 
     .letras img {
@@ -690,9 +773,17 @@ h3 {
 }
 
 @media screen and (max-width: 375px){
-    .contenedor {
-        grid-template-columns: 375px;
-        grid-template-rows: 449px 1115px 50px;
+
+    .header {
+        width:375px;
+    }
+
+    .main {
+        width: 375px;
+    }
+
+    .footer {
+        width: 375px;
     }
 
     .logo {
@@ -725,9 +816,16 @@ h3 {
         height: 185px;
     } 
 
-    .contenedorDisco {
-        grid-template-columns: 375px;
-        grid-template-rows: 449px 1335px 50px;
+    .headerDisc {
+        width:375px;
+    }
+
+    .mainDisc {
+        width: 375px;
+    }
+
+    .footerDisc {
+        width: 375px;
     }
 
     .discografia li img {
@@ -735,33 +833,68 @@ h3 {
         height: 360px;
     }
 
-    .contenedorMerch {
-        grid-template-columns: 375px;
-        grid-template-rows: 449px 1180px 50px;
-    }
-
-    .contenedorContacto {
-        grid-template-columns: 375px;
-        grid-template-rows: 449px 400px 50px;
-    }
-
-    .contenedorBio {
-        grid-template-columns: 375px;
-        grid-template-rows: 449px 550px 50px;
-    }
-
-    .contenedorGaleria {
-        grid-template-columns: 375px;
-        grid-template-rows: 449px 2135px 50px;
-    }
-
-    .galeria img {
+    .headerMerch {
         width: 375px;
     }
 
-    .contenedorLetras {
-        grid-template-columns: 375px;
-        grid-template-rows: 449px 2050px 50px;
+    .mainMerch {
+        width: 375px;
+    }
+
+    .footerMerch {
+        width: 375px;
+    }
+
+    .headerContacto {
+        width:375px;
+    }
+
+    .mainContacto {
+        width: 375px;
+    }
+
+    .footerContacto {
+        width: 375px;
+    }
+
+    form {
+        grid-template-columns: 300px;
+    }
+
+    .headerBio {
+        width:375px;
+    }
+
+    .mainBio {
+        width: 375px;
+    }
+
+    .footerBio {
+        width: 375px;
+    }
+
+    .headerGaleria {
+        width: 375px;
+    }
+
+    .mainGaleria {
+        width: 375px;
+    }
+
+    .footerGaleria {
+        width: 375px;
+    }
+
+    .headerLetras {
+        width: 375px;
+    }
+
+    .mainLetras {
+        width: 375px;
+    }
+
+    .footerLetras {
+        width: 375px;
     }
 
     .letras img {
@@ -774,9 +907,17 @@ h3 {
 }
 
 @media screen and (max-width: 320px){
-    .contenedor {
-        grid-template-columns: 320px;
-        grid-template-rows: 417px 1115px 50px;
+
+    .header {
+        width: 320px;
+    }
+
+    .main {
+        width: 320px;
+    }
+
+    .footer {
+        width: 320px;
     }
 
     .logo {
@@ -809,9 +950,16 @@ h3 {
         height: 155px;
     } 
 
-    .contenedorDisco {
-        grid-template-columns: 320px;
-        grid-template-rows: 417px 1210px 50px;
+    .headerDisc {
+        width:320px;
+    }
+
+    .mainDisc {
+        width: 320px;
+    }
+
+    .footerDisc {
+        width: 320px;
     }
 
     .discografia li img {
@@ -819,33 +967,69 @@ h3 {
         height: 310px;
     }
 
-    .contenedorMerch {
-        grid-template-columns: 320px;
-        grid-template-rows: 417px 1080px 50px;
+    .headerMerch {
+        width:320px;
     }
 
-    .contenedorContacto {
-        grid-template-columns: 320px;
-        grid-template-rows: 417px 400px 50px;
-    }
-
-    .contenedorBio {
-        grid-template-columns: 320px;
-        grid-template-rows: 417px 610px 50px;
-    }
-
-    .contenedorGaleria {
-        grid-template-columns: 320px;
-        grid-template-rows: 417px 1845px 50px;
-    }
-
-    .galeria img {
+    .mainMerch {
         width: 320px;
     }
 
-    .contenedorLetras {
-        grid-template-columns: 320px;
-        grid-template-rows: 417px 1780px 50px;
+    .footerMerch {
+        width: 320px;
+    }
+
+    .headerContacto {
+        width:320px;
+    }
+
+    .mainContacto {
+        width: 320px;
+    }
+
+    .footerContacto {
+        width: 320px;
+    }
+
+    .headerBio {
+        width:320px;
+    }
+
+    .mainBio {
+        width: 320px;
+    }
+
+    .footerBio {
+        width: 320px;
+    }
+
+/*
+    .galeria img {
+        width: 320px;
+    }
+*/
+    .headerGaleria {
+        width: 320px;
+    }
+
+    .mainGaleria {
+        width: 320px;
+    }
+
+    .footerGaleria {
+        width: 320px;
+    }
+
+    .headerLetras {
+        width: 320px;
+    }
+
+    .mainLetras {
+        width: 320px;
+    }
+
+    .footerLetras {
+        width: 320px;
     }
 
     .letras img {
