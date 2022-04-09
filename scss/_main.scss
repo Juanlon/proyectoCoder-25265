@@ -1,0 +1,37 @@
+.mainBio {
+    grid-area:mainBio;
+    padding: 20px;
+    text-align: justify;
+    color: $colorTerciario;
+    font-family: $fuentePrincipal;
+    h1 {
+        font-family: $fuenteStencil;
+        text-align: center;
+        font-size: 2.2rem;
+        color: $colorSecundario;
+        margin: 15px;
+        padding: 10px;
+    }
+    p {
+        padding: 20px;
+        text-align: justify;
+        color: $colorTerciario;
+        font-family: $fuentePrincipal;
+    }
+    .bio {
+        background-image: url("media/fondo.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    h2 {
+        font-family: $fuenteStencil;
+        color: $colorSecundario;
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 20px;
+        a {
+            text-decoration: none;
+            color: $colorSecundario;
+        }
+    }
+}

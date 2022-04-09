@@ -1,0 +1,20 @@
+.pie {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    li {
+        position: relative;
+        padding: 10px 20px;
+        list-style: none;
+        a {
+            text-decoration: none;
+            font-family: $fuentePrincipal;
+            font-size: 1rem;
+            color: rgb(73, 73, 73);
+            &:hover {
+                color: $colorTerciario;
+            }
+        }
+    }
+}
+

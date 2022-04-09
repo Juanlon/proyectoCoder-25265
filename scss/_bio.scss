@@ -1,0 +1,23 @@
+
+
+.contenedorBio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 293px 400px 50px;
+    grid-template-areas: 
+    "headerBio"
+    "mainBio"
+    "footerBio";
+    justify-content: center;
+    .headerBio {
+        grid-area: headerBio;
+    }
+    .mainBio {
+        grid-area:mainBio;
+    }
+    .footerBio {
+        grid-area: footerBio;
+    }
+}
+
+

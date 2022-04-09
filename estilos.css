@@ -1,0 +1,189 @@
+.contenedorBio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 293px 400px 50px;
+  grid-template-areas: "headerBio" "mainBio" "footerBio";
+  justify-content: center; }
+  .contenedorBio .headerBio {
+    grid-area: headerBio; }
+  .contenedorBio .mainBio {
+    grid-area: mainBio; }
+  .contenedorBio .footerBio {
+    grid-area: footerBio; }
+
+.logo {
+  width: 432px;
+  height: 246px;
+  display: block;
+  margin: auto; }
+
+.menu {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; }
+  .menu li {
+    position: relative;
+    font-size: 1.4rem;
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+    background-color: red;
+    width: 160px; }
+    .menu li a {
+      text-decoration: none;
+      font-family: "Courier New", Courier, monospace;
+      font-weight: bolder;
+      background-color: red;
+      color: black; }
+      .menu li a:hover {
+        color: white; }
+    .menu li .submenu {
+      display: none;
+      position: absolute;
+      z-index: 2; }
+      .menu li .submenu li {
+        list-style: none;
+        display: block;
+        background-color: red;
+        width: 160px; }
+    .menu li .submenu__bio {
+      display: none;
+      position: absolute;
+      z-index: 2; }
+      .menu li .submenu__bio li {
+        list-style: none;
+        display: block;
+        background-color: red;
+        width: 160px; }
+    .menu li:hover ul {
+      display: block; }
+
+.pie {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; }
+  .pie li {
+    position: relative;
+    padding: 10px 20px;
+    list-style: none; }
+    .pie li a {
+      text-decoration: none;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1rem;
+      color: #494949; }
+      .pie li a:hover {
+        color: white; }
+
+.mainBio {
+  grid-area: mainBio;
+  padding: 20px;
+  text-align: justify;
+  color: white;
+  font-family: "Courier New", Courier, monospace; }
+  .mainBio h1 {
+    font-family: "Allerta Stencil", "Special Elite", sans-serif;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #505050;
+    margin: 15px;
+    padding: 10px; }
+  .mainBio p {
+    padding: 20px;
+    text-align: justify;
+    color: white;
+    font-family: "Courier New", Courier, monospace; }
+  .mainBio .bio {
+    background-image: url("media/fondo.jpg");
+    background-position: center;
+    background-size: cover; }
+  .mainBio h2 {
+    font-family: "Allerta Stencil", "Special Elite", sans-serif;
+    color: #505050;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 20px; }
+    .mainBio h2 a {
+      text-decoration: none;
+      color: #505050; }
+
+@media screen and (max-width: 768px) {
+  .contenedorBio {
+    grid-template-columns: 768px;
+    grid-template-rows: 293px 450px 50px; }
+  .menu {
+    width: 768px; }
+    .menu li {
+      padding: 10px 0;
+      width: 150px; }
+      .menu li:hover ul {
+        display: none; } }
+
+@media screen and (max-width: 480px) {
+  .contenedorBio {
+    grid-template-columns: 480px;
+    grid-template-rows: 481px 550px 50px; }
+  .menu {
+    width: 480px;
+    display: flex;
+    flex-direction: column; }
+    .menu li {
+      width: 480px;
+      padding: 10px 0; }
+      .menu li:hover ul {
+        display: none; } }
+
+@media screen and (max-width: 425px) {
+  .contenedorBio {
+    grid-template-columns: 425px;
+    grid-template-rows: 477px 600px 50px; }
+  .logo {
+    width: 425px;
+    height: 242px; }
+  .menu {
+    width: 425px; }
+    .menu li {
+      width: 425px; }
+  .pie {
+    width: 425px; }
+    .pie li {
+      padding: 10px; } }
+
+@media screen and (max-width: 375px) {
+  .contenedorBio {
+    grid-template-columns: 375px;
+    grid-template-rows: 449px 650px 50px; }
+  .logo {
+    width: 375px;
+    height: 214px; }
+  .menu {
+    width: 375px; }
+    .menu li {
+      width: 375px; }
+  .pie {
+    width: 375px; }
+    .pie li {
+      padding: 10px; } }
+
+@media screen and (max-width: 320px) {
+  .contenedorBio {
+    grid-template-columns: 320px;
+    grid-template-rows: 417px 700px 50px; }
+  .logo {
+    width: 320px;
+    height: 182px; }
+  .menu {
+    width: 320px; }
+    .menu li {
+      width: 320px; }
+  .pie {
+    width: 320px; }
+    .pie li {
+      padding: 10px 2px; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black; }
+
+html {
+  font-size: 62,5%; }

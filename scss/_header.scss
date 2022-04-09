@@ -1,0 +1,59 @@
+.logo {
+    width: 432px;
+    height: 246px;
+    display: block;
+    margin: auto;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    li {
+        position: relative;
+        font-size: 1.4rem;
+        padding: 10px;
+        text-align: center;
+        list-style: none;
+        background-color: $colorPrincipal;
+        width: 160px;
+        a {
+            text-decoration: none;
+            font-family: $fuentePrincipal;
+            font-weight: bolder;
+            background-color: $colorPrincipal;
+            color: rgb(0, 0, 0);
+            &:hover {
+                color: $colorTerciario;
+            }
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            z-index: 2;
+            li {
+                list-style: none;
+                display: block;
+                background-color: $colorPrincipal;   
+                width: 160px; 
+            }
+        }
+        .submenu__bio {
+            display: none;
+            position: absolute;
+            z-index: 2;
+            li {
+                list-style: none;
+                display: block;
+                background-color: $colorPrincipal;   
+                width: 160px; 
+            }
+        }
+        &:hover ul {
+            display: block;
+        }
+
+    }
+}
+
+
